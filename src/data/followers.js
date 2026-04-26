@@ -1,0 +1,7 @@
+const followersMap = {
+  1: [2, 3, 4],
+  2: [1, 3],
+  3: [1],
+};
+
+module.exports = followersMap;

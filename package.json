@@ -1,0 +1,32 @@
+{
+  "name": "social-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:api": "nodemon services/api-gateway/index.js",
+    "dev:user": "nodemon services/user-service/index.js",
+    "dev:post": "nodemon services/post-service/index.js",
+    "dev:feed": "nodemon services/feed-service/index.js",
+    "dev:notification": "nodemon services/notification-service/index.js",
+    "dev:media": "nodemon services/media-service/index.js",
+    "dev": "concurrently \"npm run dev:api\" \"npm run dev:user\" \"npm run dev:post\" \"npm run dev:feed\" \"npm run dev:notification\" \"npm run dev:media\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "dotenv-cli": "^11.0.0",
+    "nodemon": "^3.1.14"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "http-proxy-middleware": "^3.0.5",
+    "ioredis": "^5.10.1",
+    "kafkajs": "^2.2.4",
+    "pg": "^8.20.0",
+    "redis": "^5.12.1"
+  }
+}
